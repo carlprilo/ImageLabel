@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Main:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Main_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Main/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="testng" module-name="Main" />
+          <element id="library" level="project" name="Maven: org.apache.hadoop:hadoop-common:3.0.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

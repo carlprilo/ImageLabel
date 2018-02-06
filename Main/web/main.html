@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        #header {
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:5px;
+        }
+        #left {
+            line-height:30px;
+            background-color:#eeeeee;
+            height:800px;
+            width:100px;
+            float:left;
+            padding:5px;
+        }
+        #main{
+            height: max-content;
+            width: max-content;
+            position: relative;
+        }
+        #down {
+            height: max-content;
+            width: max-content;
+            float: left;
+            position: absolute;
+            left: 150px;
+        }
+        #right {
+            line-height:30px;
+            background-color:#eeeeee;
+            height:800px;
+            width:100px;
+            float:right;
+            padding:5px;
+        }
+        #footer {
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:5px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<script  src="jquery-3.3.1.js"></script>
+<script src="index.js"></script>
+
+<div id="header">
+    <h1>Image Label</h1>
+</div>
+
+<div id="left">
+    <input type="file" id="file" style="display:none" onchange="readAsDataURL()">
+    <img src="icons/open.png" id="open_icon" onclick="openDialog()"  width="30" height="30" ><br>
+    open<br>
+
+    <input multiple type="file" id="files" style="display: none" onchange="readFilelist()" >
+    <img src="icons/open.png" onclick="openDialogMulti()"  width="30" height="30" ><br>
+    open dir<br>
+
+    <img src="icons/open.png" width="30" height="30"/><br>
+    change save dir<br>
+
+    <img src="icons/next.png " width="30" height="30"/><br>
+    next image<br>
+
+    <img src="icons/prev.png"width="30" height="30"/><br>
+    prev image<br>
+
+    <img src="icons/save.png" width="30" height="30" onclick="genXML()" id="save_icon"/><br>
+    save<br>
+
+    <img src="icons/objects.png" width="30" height="30" onclick="changeEditMode()" id="create_button"/><br>
+    create rectBox<br>
+
+    <img src="icons/edit.png" width="30" height="30"  id="edit_button"/><br>
+    edit rectBox<br>
+
+    <img src="icons/eye.png" width="30" height="30" onclick="hideDraw()" id="hide_button"/><br>
+    hide rectBox<br>
+
+    <img src="icons/eye.png" width="30" height="30" onclick="showDraw()" id="show_button"/><br>
+    show rectBox<br>
+</div>
+
+
+<div id="right">
+    <input type="text" id="input_label" >
+    <img src="icons/verify.png" width="30" height="30" onclick="addLabel()" id="addlabel"/><br>
+    choose label<br>
+
+    <img src="icons/color.png" width="30" height="30" onclick="setLabel()" id="setlabel"/><br>
+    label color<br>
+</div>
+<div id="main">
+    <div id="down" >
+        <canvas id="main_canvas" width="1000" height="800" ></canvas>
+    </div>
+
+</div>
+
+<div id="footer">
+
+    <p id="cood">
+        coordinate x,y<br>
+</div>
+
+<div id="xml_p">
+    <input type="file"  id="xml_input">
+    <input type="button"  onclick="praseXML()" />
+</div>
+</body>
+
+</html>
