@@ -181,9 +181,12 @@ function praseXML() {
     label_g.push(label_name);
     //label_g=label_name;
     changeEditMode();
-    addLabelWithName(label_name);
+    //addLabelWithName(label_name);
     draw_rect(label_name,x_min,y_min,x_max,y_max);
-    changeEditMode();
+    var canvas = document.getElementById("canvas_"+label_num);
+    var ctx_sub = canvas.getContext('2d');
+    ctx_sub.font="24px serif";
+    ctx_sub.fillText(label_name,x_max,y_min);
 }
 
 function genXML() {
