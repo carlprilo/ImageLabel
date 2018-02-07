@@ -43,5 +43,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-common:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: dom4j:dom4j:1.6" level="project" />
   </component>
 </module>

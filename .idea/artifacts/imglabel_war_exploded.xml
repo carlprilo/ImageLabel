@@ -110,6 +110,8 @@
           <element id="library" level="project" name="Maven: io.netty:netty:3.10.5.Final" />
           <element id="library" level="project" name="Maven: io.netty:netty-all:4.0.23.Final" />
           <element id="library" level="project" name="Maven: org.fusesource.leveldbjni:leveldbjni-all:1.8" />
+          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6" />
+          <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.0.b2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

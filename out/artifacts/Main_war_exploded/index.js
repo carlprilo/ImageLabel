@@ -9,6 +9,7 @@ var w_g; //image width
 var h_g;  //image height
 var label_g = new Array();
 var label_num=0;
+var xml_content=null;
 
 function checkMouse(ev) {
     if (!editMode)
@@ -81,8 +82,7 @@ function readAsDataURL() {
 function readFilelist() {
     console.log("read many files!");
 }
-function openDialog()
-{
+function openDialog() {
     document.getElementById("file").click();
 }
 
@@ -99,14 +99,11 @@ function showCoordinates(evt) {
 function changeEditMode() {
     editMode = !editMode;
     var edit_button;
-    if(editMode)
-    {
+    if(editMode) {
         edit_button = document.getElementById("create_button");
         edit_button.src="icons/quit.png";
         addDivOnImage();
-    }
-    else
-    {
+    } else {
         edit_button = document.getElementById("create_button");
         edit_button.src="icons/objects.png";
     }
@@ -130,12 +127,10 @@ function addDivOnImage() {
 }
 
 function hideDraw() {
-    for(var i=1;i<=label_num;i++)
-    {
+    for(var i=1;i<=label_num;i++) {
         var sub_c = document.getElementById("canvas_"+i);
         sub_c.hidden=true;
     }
-
 }
 
 function showDraw() {
@@ -250,6 +245,7 @@ function genXML() {
         root.appendChild(size);
         root.appendChild(object);
         console.log(root.outerHTML.toString());
+        xml_content = root.outerHTML.toString();
         console.log(root);
     }
 }
@@ -299,15 +295,26 @@ function getTest()
     {// code for IE6, IE5
         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
     }
-    // xmlhttp.onreadystatechange=function()
-    // {
-    //     if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    //     {
-    //         document.getElementById("pre_icon").innerHTML=xmlhttp.responseText;
-    //     }
-    // }
     xmlhttp.open("GET","/hello",true);
-    xmlhttp.send();
+    xmlhttp.send("xml=apple");
     console.log("touch here\n");
+}
 
+function setXMLtoJava() {
+    console.log("set xml to java");
+    // var xmlhttp;
+    // if (window.XMLHttpRequest)
+    // {// code for IE7+, Firefox, Chrome, Opera, Safari
+    //     xmlhttp=new XMLHttpRequest();
+    // }
+    // else
+    // {// code for IE6, IE5
+    //     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    // }
+    // xmlhttp.open("GET","/hello",true);
+    // xmlhttp.setRequestHeader("Content-type","post_request")
+    // var content = "xml="+xml_content;
+    // xmlhttp.send(content);
+
+    $.post("hello",{"xml":xml_content});
 }
