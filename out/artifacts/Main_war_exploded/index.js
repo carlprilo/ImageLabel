@@ -286,3 +286,28 @@ function addLabelWithName(name) {
    // ctx_sub.strokeRect(oldX,oldY,10,20);
     ctx_sub.strokeText(name,newX[label_num-1]+5*label_num,oldY[label_num-1]);
 }
+
+function getTest()
+{
+    console.log("touch head");
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    // xmlhttp.onreadystatechange=function()
+    // {
+    //     if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    //     {
+    //         document.getElementById("pre_icon").innerHTML=xmlhttp.responseText;
+    //     }
+    // }
+    xmlhttp.open("GET","/hello",true);
+    xmlhttp.send();
+    console.log("touch here\n");
+
+}
