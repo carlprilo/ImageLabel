@@ -79,9 +79,6 @@ function readAsDataURL() {
     changed=false;
 }
 
-function readFilelist() {
-    console.log("read many files!");
-}
 function openDialog() {
     document.getElementById("file").click();
 }
@@ -316,5 +313,16 @@ function setXMLtoJava() {
     // var content = "xml="+xml_content;
     // xmlhttp.send(content);
 
-    $.post("hello",{"xml":xml_content});
+    $.post("hello",{"type":"saveXML","xml":xml_content});
+}
+
+
+function readFilelist() {
+    console.log("read many files!");
+    $.post("hello",{"type":"readDir"})
+}
+
+function readImage() {
+    console.log("read image");
+    $.post("hello",{"type":"readImage"});
 }

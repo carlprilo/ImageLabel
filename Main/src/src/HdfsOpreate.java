@@ -1,20 +1,23 @@
 package src;
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
-
+import java.io.File;
 import java.io.IOException;
 
 public class HdfsOpreate {
     //initialization
-    static Configuration conf = new Configuration();
     static FileSystem hdfs;
-    static {
-        String path = "192.168.1.203";
-        conf.addResource(new Path(path + "core-site.xml"));
+    static Configuration conf;
+    static String path;
+    public HdfsOpreate(String ip)
+    {
+        conf = new Configuration();
+        //static FileSystem hdfs;
+        path = "192.168.1.203";
+        conf.set("fs.defaultFS",ip);
         try {
             hdfs = FileSystem.get(conf);
         } catch (IOException e) {
@@ -34,7 +37,6 @@ public class HdfsOpreate {
         Path src = new Path(localSrc);
         Path dst = new Path(hdfsDst);
         hdfs.copyFromLocalFile(src, dst);
-
         //list all the files in the current direction
         FileStatus files[] = hdfs.listStatus(dst);
         System.out.println("Upload to \t" + conf.get("fs.default.name") + hdfsDst);
@@ -72,6 +74,13 @@ public class HdfsOpreate {
         } else {
             System.out.println(fileName + "  exist? \t" + isExists);
         }
+    }
+
+    //read a file
+    public void  readFile(String fileName) throws IOException{
+        Path f = new Path(fileName);
+        boolean isExists = hdfs.exists(f);
+        System.out.println(fileName + "  exist? \t" + isExists);
     }
 
 }

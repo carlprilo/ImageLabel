@@ -45,9 +45,6 @@
             padding:5px;
         }
     </style>
-
-
-
 </head>
 <body>
 
@@ -63,12 +60,12 @@
     <img src="icons/open.png" id="open_icon" onclick="openDialog()"  width="30" height="30" ><br>
     open<br>
 
-    <input multiple type="file" id="files" style="display: none" onchange="readFilelist()" >
-    <img src="icons/open.png" onclick="openDialogMulti()"  width="30" height="30" ><br>
+    <!input multiple type="file" id="files" style="display: none" onchange="readFilelist()" >
+    <img src="icons/open.png" onclick="readFilelist()"  width="30" height="30" ><br>
     open dir<br>
 
-    <img src="icons/open.png" width="30" height="30"/><br>
-    change save dir<br>
+    <img src="icons/open.png" width="30" height="30" onclick="readImage()"/><br>
+    read image<br>
 
     <img src="icons/next.png " width="30" height="30" id="next_icon" onclick="setXMLtoJava()"/><br>
     next image<br>
