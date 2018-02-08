@@ -27,14 +27,10 @@ public class Servlet extends javax.servlet.http.HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        System.out.print("get post");
-//        String content =  request.getParameter("xml");
-//        System.out.print(content+"aaa");
-//        String path  ="/home/chenpan/Files/images/";
-//        saveXml(content,path);
+
         System.out.print("got Post request");
         String type_s = request.getParameter("type");
-        handlePost(type_s,request);
+        handlePost(type_s,request,response);
 
     }
 
@@ -44,22 +40,16 @@ public class Servlet extends javax.servlet.http.HttpServlet {
         //out.println("Hello First Servlet!");
         System.out.print("got Get request!\n");
         String type_s = request.getParameter("type");
-        handleGet(type_s,request);
-        //wirteHdfs();
-        //readHdfs();
-       // readLocalFile();
-        //String content = request.getParameter("xml");
-        //System.out.print(content);
-
+        handleGet(type_s,request,response);
     }
 
-    private boolean handleGet(String type,HttpServletRequest request) throws IOException {
+    private boolean handleGet(String type,HttpServletRequest request,HttpServletResponse response) throws IOException {
         boolean result = false;
         HdfsOpreate hdfsOpreate = new HdfsOpreate(ip);
         //hdfsOpreate.listFiles(path);
         switch (type) {
             case "readImage":
-                hdfsOpreate.readFile(path + "/image/index.jpg");
+                hdfsOpreate.readFile(path + "/image/index.jpg",response);
                 result = true;
                 break;
             case "saveXml":
@@ -75,8 +65,8 @@ public class Servlet extends javax.servlet.http.HttpServlet {
         return result;
     }
 
-    private boolean handlePost(String type,HttpServletRequest request) throws IOException {
-       return handleGet(type,request);
+    private boolean handlePost(String type,HttpServletRequest request,HttpServletResponse response) throws IOException {
+       return handleGet(type,request,response);
     }
 
 

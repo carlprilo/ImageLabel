@@ -324,5 +324,20 @@ function readFilelist() {
 
 function readImage() {
     console.log("read image");
-    $.post("hello",{"type":"readImage"});
+    $.get("hello",{"type":"readImage"},
+        function (data) {
+        console.log(data);
+            var c = document.getElementById("main_canvas");
+            var ctx = c.getContext("2d");
+            var img =new Image();
+            img.onload = function () {
+                c.height=img.height;
+                c.width=img.width;
+                w_g=img.width;
+                h_g=img.height;
+                ctx.drawImage(img,0,0);
+                console.log("try draw");
+            }
+            img.src = "data:image/jpg;base64,"+data;
+        });
 }

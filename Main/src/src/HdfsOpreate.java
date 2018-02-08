@@ -1,11 +1,19 @@
 package src;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.FSDataOutputStream;
-import org.apache.hadoop.fs.FileStatus;
-import org.apache.hadoop.fs.FileSystem;
-import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.fs.*;
+import org.apache.hadoop.fs.permission.FsPermission;
+import org.apache.hadoop.io.IOUtils;
+import org.apache.hadoop.util.Progressable;
+import sun.nio.ch.IOUtil;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.net.URI;
+import java.util.Base64;
 
 public class HdfsOpreate {
     //initialization
@@ -77,9 +85,26 @@ public class HdfsOpreate {
     }
 
     //read a file
-    public void  readFile(String fileName) throws IOException{
+    public void  readFile(String fileName, HttpServletResponse response) throws IOException{
         Path f = new Path(fileName);
         boolean isExists = hdfs.exists(f);
+
+        FSDataInputStream inputStream =hdfs.open(f);
+        int i = inputStream.available();
+        byte[] buff = new byte[i];
+
+        inputStream.read(buff);
+        inputStream.close();
+        response.setContentType("image/jpg");
+        Base64.Decoder decoder = Base64.getDecoder();
+        Base64.Encoder encoder = Base64.getEncoder();
+        buff = encoder.encode(buff);
+        OutputStream out = response.getOutputStream();
+        //IOUtils.copyBytes(inputStream,out,1024,true);
+
+        out.write(buff);
+
+        out.close();
         System.out.println(fileName + "  exist? \t" + isExists);
     }
 
