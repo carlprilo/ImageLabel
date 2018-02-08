@@ -10,6 +10,7 @@ var h_g;  //image height
 var label_g = new Array();
 var label_num=0;
 var xml_content=null;
+var pathGlobal = null;
 
 function checkMouse(ev) {
     if (!editMode)
@@ -37,7 +38,7 @@ function draw_rect(name,xmin,ymin,xmax,ymax) {
     ctx.strokeStyle = "orange";
     ctx.strokeRect(xmin,ymin,xmax-xmin,ymax-ymin);
     console.log(name.toString());
-    ctx.fillText(name.toString(),xmin+1,ymin+5,50);
+    //ctx.fillText(name,xmax+10,ymin);
 }
 
 var result = document.getElementById("result");
@@ -120,7 +121,7 @@ function addDivOnImage() {
     new_canvas.addEventListener("mousedown",checkMouse,false);
     new_canvas.addEventListener("mouseup",draw,false);
     new_div.appendChild(new_canvas);
-    base_div.appendChild(new_div);
+var canvas = document.getElementById("canvas_"+label_num);    base_div.appendChild(new_div);
 }
 
 function hideDraw() {
@@ -142,7 +143,7 @@ function showDraw() {
         alert("没有绘制");
 }
 
-function praseXML() {
+function getXML() {
     if (window.XMLHttpRequest)
     {// code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp=new XMLHttpRequest();
@@ -160,22 +161,31 @@ function praseXML() {
     xmlhttp.open("GET",url,false);
     xmlhttp.send();
     xmlDoc=xmlhttp.responseXML;
+    praseXML(xmlDoc);
+}
 
-    var label_name=xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
-    var x_min=xmlDoc.getElementsByTagName("xmin")[0].childNodes[0].nodeValue;
-    var y_min=xmlDoc.getElementsByTagName("ymin")[0].childNodes[0].nodeValue;
-    var x_max=xmlDoc.getElementsByTagName("xmax")[0].childNodes[0].nodeValue;
-    var y_max=xmlDoc.getElementsByTagName("ymax")[0].childNodes[0].nodeValue;
-    oldX.push(x_min);
-    oldY.push(y_min);
-    newX.push(x_max);
-    newY.push(y_max);
-    label_g.push(label_name);
-    //label_g=label_name;
-    changeEditMode();
-    addLabelWithName(label_name);
-    draw_rect(label_name,x_min,y_min,x_max,y_max);
-    changeEditMode();
+function praseXML(xmlDoc) {
+    for(var i = 0;i<xmlDoc.getElementsByTagName("name").length;i++) {
+
+        var label_name = xmlDoc.getElementsByTagName("name")[i].childNodes[0].nodeValue;
+        var x_min = xmlDoc.getElementsByTagName("xmin")[i].childNodes[0].nodeValue;
+        var y_min = xmlDoc.getElementsByTagName("ymin")[i].childNodes[0].nodeValue;
+        var x_max = xmlDoc.getElementsByTagName("xmax")[i].childNodes[0].nodeValue;
+        var y_max = xmlDoc.getElementsByTagName("ymax")[i].childNodes[0].nodeValue;
+        oldX.push(x_min);
+        oldY.push(y_min);
+        newX.push(x_max);
+        newY.push(y_max);
+        label_g.push(label_name);
+        //label_g=label_name;
+        changeEditMode();
+        var canvas = document.getElementById("canvas_" + label_num);
+        var ctx_sub = canvas.getContext('2d');
+        ctx_sub.font = "24px serif";
+        ctx_sub.fillText(label_name, x_max, y_min);
+        draw_rect(label_name, x_min, y_min, x_max, y_max);
+        changeEditMode();
+    }
 }
 
 function genXML() {
@@ -244,6 +254,14 @@ function genXML() {
         console.log(root.outerHTML.toString());
         xml_content = root.outerHTML.toString();
         console.log(root);
+
+        $.post("hello",{"type":"saveXml","path":pathGlobal,"xml_content":xml_content},
+        function (data) {
+            if(data == "success")
+                alert("Success!");
+            else
+                alert("Fail!");
+        });
     }
 }
 
@@ -261,7 +279,6 @@ function addLabel() {
 }
 
 function setLabel() {
-
     var canvas = document.getElementById("canvas_"+label_num);
     console.log(label_num);
     console.log(label_g);
@@ -319,25 +336,46 @@ function setXMLtoJava() {
 
 function readFilelist() {
     console.log("read many files!");
-    $.post("hello",{"type":"readDir"})
+    path = prompt("请输入路径","/Output/image/");
+    if(path == null)
+        alert("请输入路径！");
+    else {
+        $.post("hello",{"type":"readDir","path":path},function (data) {
+            console.log(data);
+        });
+    }
+
 }
 
 function readImage() {
+
     console.log("read image");
-    $.get("hello",{"type":"readImage"},
-        function (data) {
-        console.log(data);
-            var c = document.getElementById("main_canvas");
-            var ctx = c.getContext("2d");
-            var img =new Image();
-            img.onload = function () {
-                c.height=img.height;
-                c.width=img.width;
-                w_g=img.width;
-                h_g=img.height;
-                ctx.drawImage(img,0,0);
-                console.log("try draw");
-            }
-            img.src = "data:image/jpg;base64,"+data;
-        });
+    path = prompt("请输入图片路径以及文件名","/Output/image/index.jpg");
+    if(path == null)
+        alert("请输入地址！");
+    else{
+        pathGlobal = path;
+        console.log(path);
+        $.get("hello",{"type":"readImage","path":path},
+            function (data) {
+                console.log(data);
+                var c = document.getElementById("main_canvas");
+                var ctx = c.getContext("2d");
+                var img =new Image();
+                img.onload = function () {
+                    c.height=img.height;
+                    c.width=img.width;
+                    w_g=img.width;
+                    h_g=img.height;
+                    ctx.drawImage(img,0,0);
+                    console.log("try draw");
+                    $.get("hello",{"type":"readXml","path":path},function (data) {
+                        var xmlResponse = data;
+                        console.log(xmlResponse);
+                        praseXML(xmlResponse);
+                    })
+                }
+                img.src = "data:image/jpg;base64,"+data;
+            });
+    }
 }

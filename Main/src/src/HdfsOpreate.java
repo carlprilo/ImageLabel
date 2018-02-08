@@ -1,4 +1,6 @@
 package src;
+
+import jdk.internal.cmm.SystemResourcePressureImpl;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
 import org.apache.hadoop.fs.permission.FsPermission;
@@ -13,6 +15,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URI;
+import java.nio.charset.Charset;
 import java.util.Base64;
 
 public class HdfsOpreate {
@@ -20,12 +23,12 @@ public class HdfsOpreate {
     static FileSystem hdfs;
     static Configuration conf;
     static String path;
-    public HdfsOpreate(String ip)
-    {
+
+    public HdfsOpreate(String ip) {
         conf = new Configuration();
         //static FileSystem hdfs;
         path = "192.168.1.203";
-        conf.set("fs.defaultFS",ip);
+        conf.set("fs.defaultFS", ip);
         try {
             hdfs = FileSystem.get(conf);
         } catch (IOException e) {
@@ -41,7 +44,7 @@ public class HdfsOpreate {
     }
 
     //copy from local file to HDFS file
-    public void copyFile(String localSrc, String hdfsDst) throws IOException{
+    public void copyFile(String localSrc, String hdfsDst) throws IOException {
         Path src = new Path(localSrc);
         Path dst = new Path(hdfsDst);
         hdfs.copyFromLocalFile(src, dst);
@@ -54,22 +57,31 @@ public class HdfsOpreate {
     }
 
     //create a new file
-    public void createFile(String fileName, String fileContent) throws IOException {
-        Path dst = new Path(fileName);
+    public void createFile(String fileName, String fileContent,HttpServletResponse response) throws IOException {
+        System.out.println(fileContent);
+        String path = fileName.split(".jpg")[0]+".xml";
+        Path dst = new Path(path);
         byte[] bytes = fileContent.getBytes();
         FSDataOutputStream output = hdfs.create(dst);
         output.write(bytes);
-        System.out.println("new file \t" + conf.get("fs.default.name") + fileName);
+        System.out.println("new file \t" + conf.get("fs.default.name") + path);
+        output.close();
+        OutputStream result = response.getOutputStream();
+        result.write("success!".getBytes());
     }
 
     //list all files
-    public void listFiles(String dirName) throws IOException {
+    public void listFiles(String dirName, HttpServletResponse response) throws IOException {
         Path f = new Path(dirName);
         FileStatus[] status = hdfs.listStatus(f);
+        OutputStream outputStream = response.getOutputStream();
         System.out.println(dirName + " has all files:");
-        for (int i = 0; i< status.length; i++) {
+        outputStream.write((dirName + "\n").getBytes(Charset.forName("UTF-8")));
+        for (int i = 0; i < status.length; i++) {
             System.out.println(status[i].getPath().toString());
+            outputStream.write((status[i].getPath().toString() + "\n").getBytes(Charset.forName("UTF-8")));
         }
+        outputStream.close();
     }
 
     //judge a file existed? and delete it!
@@ -77,7 +89,7 @@ public class HdfsOpreate {
         Path f = new Path(fileName);
         boolean isExists = hdfs.exists(f);
         if (isExists) { //if exists, delete
-            boolean isDel = hdfs.delete(f,true);
+            boolean isDel = hdfs.delete(f, true);
             System.out.println(fileName + "  delete? \t" + isDel);
         } else {
             System.out.println(fileName + "  exist? \t" + isExists);
@@ -85,27 +97,40 @@ public class HdfsOpreate {
     }
 
     //read a file
-    public void  readFile(String fileName, HttpServletResponse response) throws IOException{
+    public void readFile(String fileName, HttpServletResponse response) throws IOException {
         Path f = new Path(fileName);
         boolean isExists = hdfs.exists(f);
+        System.out.println(fileName + "  exist? \t" + isExists);
 
-        FSDataInputStream inputStream =hdfs.open(f);
+        FSDataInputStream inputStream = hdfs.open(f);
         int i = inputStream.available();
         byte[] buff = new byte[i];
-
         inputStream.read(buff);
         inputStream.close();
         response.setContentType("image/jpg");
-        Base64.Decoder decoder = Base64.getDecoder();
         Base64.Encoder encoder = Base64.getEncoder();
         buff = encoder.encode(buff);
         OutputStream out = response.getOutputStream();
-        //IOUtils.copyBytes(inputStream,out,1024,true);
-
         out.write(buff);
-
         out.close();
-        System.out.println(fileName + "  exist? \t" + isExists);
     }
 
+    public void readXml(String fileName, HttpServletResponse response) throws IOException {
+        System.out.println("check xml");
+        String xmlPath = fileName.split(".jpg")[0] + ".xml";
+        System.out.println(xmlPath);
+        Path f = new Path(xmlPath);
+        boolean isExists = hdfs.exists(f);
+        System.out.println(xmlPath + "  exist? \t" + isExists);
+
+        FSDataInputStream inputStream = hdfs.open(f);
+        int i = inputStream.available();
+        byte[] buff = new byte[i];
+        inputStream.read(buff);
+        inputStream.close();
+        response.setContentType("text/xml");
+        OutputStream out = response.getOutputStream();
+        out.write(buff);
+        out.close();
+    }
 }
