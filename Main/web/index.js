@@ -28,6 +28,7 @@ function draw(ev) {
     newY.push(ev.offsetY);
     var canvas = document.getElementById("canvas_"+label_num);
     var ctx = canvas.getContext('2d');
+    ctx.strokeStyle="green";
     ctx.strokeRect(oldX[oldX.length-1],oldY[oldY.length-1],newX[newX.length -1]-oldX[oldX.length-1],newY[newY.length-1]-oldY[oldY.length-1]);
     changed=true;
 }
@@ -62,8 +63,8 @@ function readAsDataURL() {
         alert("这不是图片文件！请检查！");
         return false;
     }
-    var url = window.URL.createObjectURL(file);
 
+    var url = window.URL.createObjectURL(file);
     var c = document.getElementById("main_canvas");
     var ctx = c.getContext("2d");
 
@@ -133,7 +134,7 @@ function hideDraw() {
 }
 
 function showDraw() {
-   var test = oldX+oldY+newY+newX;
+   var test = oldX.length;
    if(test>0){
        for(var i=1;i<=label_num;i++) {
        var sub_c = document.getElementById("canvas_"+i);
@@ -178,7 +179,6 @@ function praseXML(xmlDoc) {
         newX.push(x_max);
         newY.push(y_max);
         label_g.push(label_name);
-        //label_g=label_name;
         changeEditMode();
         var canvas = document.getElementById("canvas_" + label_num);
         var ctx_sub = canvas.getContext('2d');
@@ -259,10 +259,10 @@ function genXML() {
         $.post("hello",{"type":"saveXml","path":pathGlobal,"xml_content":xml_content},
         function (data) {
             console.log(data);
-            if("success" === data)
-                alert("Success!");
-            else
+            if("success!" !== data)
                 alert("Fail!");
+            else
+                alert("Success!");
         });
     }
 }
@@ -276,20 +276,12 @@ function addLabel() {
     console.log(newX+" "+oldY);
     var ctx_sub = canvas.getContext('2d');
     ctx_sub.font="24px serif";
-    //ctx_sub.strokeRect(oldX[label_num-1],oldY[label_num-1],10,20);
-    ctx_sub.fillText(label_g[label_num-1],newX[label_num-1]+5*label_num,oldY[label_num-1],50);
+    if(newX[label_num-1]+5<=w_g)
+        ctx_sub.fillText(label_g[label_num-1],newX[label_num-1]+5,oldY[label_num-1],50);
+    else
+        ctx_sub.fillText(label_g[label_num-1],newX[label_num-1]-50,oldY[label_num-1],50)
 }
 
-// function setLabel() {
-//     var canvas = document.getElementById("canvas_"+label_num);
-//     console.log(label_num);
-//     console.log(label_g);
-//     console.log(newX[label_num-1]+" "+oldY[label_num-1]);
-//     var ctx_sub = canvas.getContext('2d');
-//     ctx_sub.font="24px serif";
-//     //ctx_sub.strokeRect(oldX,oldY,10,20);
-//     ctx_sub.fillText(label_g,newX[label_num-1]+5*label_num,oldY[label_num-1],50);
-//}
 
 
 function getTest()
@@ -339,11 +331,9 @@ function readFilelist() {
             console.log(data);
         });
     }
-
 }
 
 function readImage() {
-
     console.log("read image");
     path = prompt("请输入图片路径以及文件名","/Output/image/index.jpg");
     if(path == null)
@@ -354,8 +344,12 @@ function readImage() {
         $.get("hello",{"type":"readImage","path":path},
             function (data) {
                 console.log(data);
+                clearCanvas();
+                initVar();
+
                 var c = document.getElementById("main_canvas");
                 var ctx = c.getContext("2d");
+                ctx.clearRect(0,0,c.width,c.height);
                 var img =new Image();
                 img.onload = function () {
                     c.height=img.height;
@@ -372,5 +366,24 @@ function readImage() {
                 }
                 img.src = "data:image/jpg;base64,"+data;
             });
+    }
+}
+
+function initVar() {
+    editMode = false;
+    oldX = new Array();
+    oldY = new Array();
+    newX = new Array();
+    newY = new Array();
+    changed = false;
+    label_g = new Array();
+    label_num=0;
+}
+
+function clearCanvas() {
+    for(var i=1;i<=label_num;i++) {
+        var c = document.getElementById("canvas_"+i);
+        var ctx = c.getContext("2d");
+        ctx.clearRect(0,0,c.width,c.height);
     }
 }
