@@ -3,6 +3,7 @@ var oldX = new Array();
 var oldY = new Array();
 var newX = new Array();
 var newY = new Array();
+var enable = new Array();
 var pure_name_g;
 var changed = false;
 var w_g; //image width
@@ -26,6 +27,7 @@ function draw(ev) {
 
     newX.push(ev.offsetX);
     newY.push(ev.offsetY);
+    enable.push(true);
     var canvas = document.getElementById("canvas_"+label_num);
     var ctx = canvas.getContext('2d');
     ctx.strokeStyle="green";
@@ -39,55 +41,56 @@ function draw_rect(name,xmin,ymin,xmax,ymax) {
     ctx.strokeStyle = "orange";
     ctx.strokeRect(xmin,ymin,xmax-xmin,ymax-ymin);
     console.log(name.toString());
-    //ctx.fillText(name,xmax+10,ymin);
 }
 
-var result = document.getElementById("result");
-var file = document.getElementById("file");
+//
+// var result = document.getElementById("result");
+// var file = document.getElementById("file");
+//
+// //判断浏览器是否支持FileReader接口
+// if(typeof FileReader == 'undefined')  {
+//     result.InnerHTML = "<p>你的浏览器不支持FileReader接口！</p>";
+//     //使选择控件不可操作
+//     file.setAttribute("disabled", "disabled"); //使得之前操作失效，重新启动
+// }
+//
+// function readAsDataURL() {
+//     //检验是否为图像文件
+//     var file = document.getElementById("file").files[0];
+//     console.log("image name:"+file.name);
+//     var pure_file = file.name.split(".");
+//     console.log("pure file name:"+pure_file[0]);
+//     pure_name_g=pure_file[0];
+//     if(!/image\/\w+/.test(file.type)) {
+//         alert("这不是图片文件！请检查！");
+//         return false;
+//     }
+//
+//     var url = window.URL.createObjectURL(file);
+//     var c = document.getElementById("main_canvas");
+//     var ctx = c.getContext("2d");
+//
+//     var img =new Image();
+//     img.onload = function () {
+//         c.height=img.height;
+//         c.width=img.width;
+//         w_g=img.width;
+//         h_g=img.height;
+//         ctx.drawImage(img,0,0);
+//     }
+//     img.src = url;
+//
+//     changed=false;
+// }
 
-//判断浏览器是否支持FileReader接口
-if(typeof FileReader == 'undefined')  {
-    result.InnerHTML = "<p>你的浏览器不支持FileReader接口！</p>";
-    //使选择控件不可操作
-    file.setAttribute("disabled", "disabled"); //使得之前操作失效，重新启动
-}
+// function openDialog() {
+//     document.getElementById("file").click();
+// }
+//
+// function openDialogMulti() {
+//     document.getElementById("files").click();
+//}
 
-function readAsDataURL() {
-    //检验是否为图像文件
-    var file = document.getElementById("file").files[0];
-    console.log("image name:"+file.name);
-    var pure_file = file.name.split(".");
-    console.log("pure file name:"+pure_file[0]);
-    pure_name_g=pure_file[0];
-    if(!/image\/\w+/.test(file.type)) {
-        alert("这不是图片文件！请检查！");
-        return false;
-    }
-
-    var url = window.URL.createObjectURL(file);
-    var c = document.getElementById("main_canvas");
-    var ctx = c.getContext("2d");
-
-    var img =new Image();
-    img.onload = function () {
-        c.height=img.height;
-        c.width=img.width;
-        w_g=img.width;
-        h_g=img.height;
-        ctx.drawImage(img,0,0);
-    }
-    img.src = url;
-
-    changed=false;
-}
-
-function openDialog() {
-    document.getElementById("file").click();
-}
-
-function openDialogMulti() {
-    document.getElementById("files").click();
-}
 function showCoordinates(evt) {
     var p = document.getElementById('cood');
     if (evt.offsetX > w_g)
@@ -179,11 +182,12 @@ function praseXML(xmlDoc) {
         newX.push(x_max);
         newY.push(y_max);
         label_g.push(label_name);
+        enable.push(true);
         changeEditMode();
         var canvas = document.getElementById("canvas_" + label_num);
         var ctx_sub = canvas.getContext('2d');
         ctx_sub.font = "24px serif";
-        ctx_sub.fillText(label_name, x_max, y_min);
+        ctx_sub.fillText(label_name+"["+label_num+"]", x_max, y_min);
         draw_rect(label_name, x_min, y_min, x_max, y_max);
         changeEditMode();
     }
@@ -225,7 +229,8 @@ function genXML() {
 
         var object = xmldoc.createElement("object");
         for(var i=0;i<label_num;i++) {
-
+            if(!enable[i])
+                continue;
             var name = xmldoc.createElement("name");
             var nameTxt = xmldoc.createTextNode(label_g[i].toString());
             name.appendChild(nameTxt);
@@ -277,9 +282,9 @@ function addLabel() {
     var ctx_sub = canvas.getContext('2d');
     ctx_sub.font="24px serif";
     if(newX[label_num-1]+5<=w_g)
-        ctx_sub.fillText(label_g[label_num-1],newX[label_num-1]+5,oldY[label_num-1],50);
+        ctx_sub.fillText(label_g[label_num-1]+"["+label_num+"]",newX[label_num-1]+5,oldY[label_num-1],50);
     else
-        ctx_sub.fillText(label_g[label_num-1],newX[label_num-1]-50,oldY[label_num-1],50)
+        ctx_sub.fillText(label_g[label_num-1]+"["+label_num+"]",newX[label_num-1]-50,oldY[label_num-1],50)
 }
 
 
@@ -375,6 +380,7 @@ function initVar() {
     oldY = new Array();
     newX = new Array();
     newY = new Array();
+    enable = new Array();
     changed = false;
     label_g = new Array();
     label_num=0;
@@ -386,4 +392,19 @@ function clearCanvas() {
         var ctx = c.getContext("2d");
         ctx.clearRect(0,0,c.width,c.height);
     }
+}
+
+function deleteLabel() {
+
+    var input = document.getElementById("input_label_num");
+    var delete_label = input.value;
+    if(delete_label>label_num){
+        alert("请输入要删除的label编号");
+        return;
+    }
+    enable[delete_label-1] = false;  //label_num从１开始有效，其余数组是０开始有效，所以要－１
+    var c = document.getElementById("canvas_"+delete_label);
+    var ctx = c.getContext("2d");
+    ctx.clearRect(0,0,c.width,c.height);
+    changed=true;
 }

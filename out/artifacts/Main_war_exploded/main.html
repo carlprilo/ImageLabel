@@ -56,9 +56,6 @@
 </div>
 
 <div id="left">
-    <input type="file" id="file" style="display:none" onchange="readAsDataURL()">
-    <img src="icons/open.png" id="open_icon" onclick="openDialog()"  width="30" height="30" ><br>
-    open<br>
 
     <!input multiple type="file" id="files" style="display: none" onchange="readFilelist()" >
     <img src="icons/open.png" onclick="readFilelist()"  width="30" height="30" ><br>
@@ -93,7 +90,11 @@
 <div id="right">
     <input type="text" id="input_label" >
     <img src="icons/verify.png" width="30" height="30" onclick="addLabel()" id="addlabel"/><br>
-    choose label<br>
+    add label<br>
+
+    <input type="text" id="input_label_num">
+    <img src="icons/delete.png" width="30" height="30" onclick="deleteLabel()" id="deletelabel"/><br>
+    delete label<br>
 </div>
 <div id="main">
     <div id="down" >
