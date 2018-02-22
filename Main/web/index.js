@@ -43,53 +43,6 @@ function draw_rect(name,xmin,ymin,xmax,ymax) {
     console.log(name.toString());
 }
 
-//
-// var result = document.getElementById("result");
-// var file = document.getElementById("file");
-//
-// //判断浏览器是否支持FileReader接口
-// if(typeof FileReader == 'undefined')  {
-//     result.InnerHTML = "<p>你的浏览器不支持FileReader接口！</p>";
-//     //使选择控件不可操作
-//     file.setAttribute("disabled", "disabled"); //使得之前操作失效，重新启动
-// }
-//
-// function readAsDataURL() {
-//     //检验是否为图像文件
-//     var file = document.getElementById("file").files[0];
-//     console.log("image name:"+file.name);
-//     var pure_file = file.name.split(".");
-//     console.log("pure file name:"+pure_file[0]);
-//     pure_name_g=pure_file[0];
-//     if(!/image\/\w+/.test(file.type)) {
-//         alert("这不是图片文件！请检查！");
-//         return false;
-//     }
-//
-//     var url = window.URL.createObjectURL(file);
-//     var c = document.getElementById("main_canvas");
-//     var ctx = c.getContext("2d");
-//
-//     var img =new Image();
-//     img.onload = function () {
-//         c.height=img.height;
-//         c.width=img.width;
-//         w_g=img.width;
-//         h_g=img.height;
-//         ctx.drawImage(img,0,0);
-//     }
-//     img.src = url;
-//
-//     changed=false;
-// }
-
-// function openDialog() {
-//     document.getElementById("file").click();
-// }
-//
-// function openDialogMulti() {
-//     document.getElementById("files").click();
-//}
 
 function showCoordinates(evt) {
     var p = document.getElementById('cood');
@@ -148,26 +101,6 @@ function showDraw() {
         alert("没有绘制");
 }
 
-function getXML() {
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-    }
-    else
-    {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-
-    var file = document.getElementById("xml_input").files[0];
-    var url = window.URL.createObjectURL(file);
-    console.log("xml name:"+file.name);
-    var pure_name = file.name.split(".");
-    console.log("xml pure name:"+pure_name[0]);
-    xmlhttp.open("GET",url,false);
-    xmlhttp.send();
-    xmlDoc=xmlhttp.responseXML;
-    praseXML(xmlDoc);
-}
 
 function praseXML(xmlDoc) {
     for(var i = 0;i<xmlDoc.getElementsByTagName("name").length;i++) {
@@ -369,7 +302,7 @@ function readImage() {
                         praseXML(xmlResponse);
                     })
                 }
-                img.src = "data:image/jpg;base64,"+data;
+                img.src = "data:image;base64,"+data;
             });
     }
 }

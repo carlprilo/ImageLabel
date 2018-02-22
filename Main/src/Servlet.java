@@ -1,22 +1,9 @@
-import com.sun.beans.decoder.DocumentHandler;
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.FSDataInputStream;
-import org.apache.hadoop.fs.FSDataOutputStream;
-import org.apache.hadoop.fs.FileSystem;
-import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.IOUtils;
-import org.dom4j.DocumentHelper;
-import org.dom4j.io.OutputFormat;
-import org.dom4j.io.XMLWriter;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
+
 import src.HdfsOpreate;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.*;
 
 @WebServlet(name = "Servlet",urlPatterns = {"/hello"})
@@ -72,35 +59,35 @@ public class Servlet extends javax.servlet.http.HttpServlet {
     }
 
 
-    private void readLocalFile() {
-        Element element = null;
-        File f = new File("/home/chenpan/Files/images/index.xml");
-        DocumentBuilder db = null;
-        DocumentBuilderFactory dbf = null;
-        try{
-            dbf = DocumentBuilderFactory.newInstance();
-            db = dbf.newDocumentBuilder();
-            Document dt = db.parse(f);
-            element = dt.getDocumentElement();
-            System.out.print("root:" + element.getNodeName()+"\n");
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    private void saveXml(String xml,String path) {
-        org.dom4j.Document doc = null;
-        try{
-            System.out.println("save xml");
-            doc = org.dom4j.DocumentHelper.parseText(xml);
-            OutputFormat format = OutputFormat.createPrettyPrint();
-            format.setEncoding("GB2312");
-            XMLWriter writer = new XMLWriter(new FileWriter(new File(path+"index0.xml")),format);writer.write(doc);
-            writer.close();
-        }catch (Exception ex)
-        {
-            ex.printStackTrace();
-        }
-
-    }
+//    private void readLocalFile() {
+//        Element element = null;
+//        File f = new File("/home/chenpan/Files/images/index.xml");
+//        DocumentBuilder db = null;
+//        DocumentBuilderFactory dbf = null;
+//        try{
+//            dbf = DocumentBuilderFactory.newInstance();
+//            db = dbf.newDocumentBuilder();
+//            Document dt = db.parse(f);
+//            element = dt.getDocumentElement();
+//            System.out.print("root:" + element.getNodeName()+"\n");
+//        } catch (Exception e){
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    private void saveXml(String xml,String path) {
+//        org.dom4j.Document doc = null;
+//        try{
+//            System.out.println("save xml");
+//            doc = org.dom4j.DocumentHelper.parseText(xml);
+//            OutputFormat format = OutputFormat.createPrettyPrint();
+//            format.setEncoding("GB2312");
+//            XMLWriter writer = new XMLWriter(new FileWriter(new File(path+"index0.xml")),format);writer.write(doc);
+//            writer.close();
+//        }catch (Exception ex)
+//        {
+//            ex.printStackTrace();
+//        }
+//
+//    }
 }

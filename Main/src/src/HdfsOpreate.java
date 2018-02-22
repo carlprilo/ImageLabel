@@ -1,20 +1,11 @@
 package src;
 
-import jdk.internal.cmm.SystemResourcePressureImpl;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
-import org.apache.hadoop.fs.permission.FsPermission;
-import org.apache.hadoop.io.IOUtils;
-import org.apache.hadoop.util.Progressable;
-import sun.nio.ch.IOUtil;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.net.URI;
 import java.nio.charset.Charset;
 import java.util.Base64;
 
@@ -59,7 +50,7 @@ public class HdfsOpreate {
     //create a new file
     public void createFile(String fileName, String fileContent,HttpServletResponse response) throws IOException {
         System.out.println(fileContent);
-        String path = fileName.split(".jpg")[0]+".xml";
+        String path = fileName.split("[.]")[0]+".xml";
         Path dst = new Path(path);
         byte[] bytes = fileContent.getBytes();
         FSDataOutputStream output = hdfs.create(dst);
@@ -107,7 +98,7 @@ public class HdfsOpreate {
         byte[] buff = new byte[i];
         inputStream.read(buff);
         inputStream.close();
-        response.setContentType("image/jpg");
+        response.setContentType("image");
         Base64.Encoder encoder = Base64.getEncoder();
         buff = encoder.encode(buff);
         OutputStream out = response.getOutputStream();
@@ -117,7 +108,7 @@ public class HdfsOpreate {
 
     public void readXml(String fileName, HttpServletResponse response) throws IOException {
         System.out.println("check xml");
-        String xmlPath = fileName.split(".jpg")[0] + ".xml";
+        String xmlPath = fileName.split("[.]")[0] + ".xml";
         System.out.println(xmlPath);
         Path f = new Path(xmlPath);
         boolean isExists = hdfs.exists(f);
