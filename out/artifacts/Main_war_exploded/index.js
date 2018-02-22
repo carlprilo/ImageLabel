@@ -28,7 +28,7 @@ function draw(ev) {
     newY.push(ev.offsetY);
     var canvas = document.getElementById("canvas_"+label_num);
     var ctx = canvas.getContext('2d');
-    ctx.strokeRect(oldX[oldY.length-1],oldY[label_num-1],newX[label_num -1]-oldX[label_num-1],newY[label_num-1]-oldY[label_num-1]);
+    ctx.strokeRect(oldX[oldX.length-1],oldY[oldY.length-1],newX[newX.length -1]-oldX[oldX.length-1],newY[newY.length-1]-oldY[oldY.length-1]);
     changed=true;
 }
 
@@ -121,7 +121,8 @@ function addDivOnImage() {
     new_canvas.addEventListener("mousedown",checkMouse,false);
     new_canvas.addEventListener("mouseup",draw,false);
     new_div.appendChild(new_canvas);
-var canvas = document.getElementById("canvas_"+label_num);    base_div.appendChild(new_div);
+    var canvas = document.getElementById("canvas_"+label_num);
+    base_div.appendChild(new_div);
 }
 
 function hideDraw() {
@@ -226,17 +227,17 @@ function genXML() {
         for(var i=0;i<label_num;i++) {
 
             var name = xmldoc.createElement("name");
-            var nameTxt = xmldoc.createTextNode(label_g.pop());
+            var nameTxt = xmldoc.createTextNode(label_g[i].toString());
             name.appendChild(nameTxt);
             var box = xmldoc.createElement("box");
             var xmin = xmldoc.createElement("xmin");
-            var xminTxt = xmldoc.createTextNode(oldX.pop().toString());
+            var xminTxt = xmldoc.createTextNode(oldX[i].toString());
             var xmax = xmldoc.createElement("xmax");
-            var xmaxTxt = xmldoc.createTextNode(newX.pop().toString());
+            var xmaxTxt = xmldoc.createTextNode(newX[i].toString());
             var ymin = xmldoc.createElement("ymin");
-            var yminTxt = xmldoc.createTextNode(oldY.pop().toString());
+            var yminTxt = xmldoc.createTextNode(oldY[i].toString());
             var ymax = xmldoc.createElement("ymax");
-            var ymaxTxt = xmldoc.createTextNode(newY.pop().toString());
+            var ymaxTxt = xmldoc.createTextNode(newY[i].toString());
             xmin.appendChild(xminTxt);
             xmax.appendChild(xmaxTxt);
             ymin.appendChild(yminTxt);
@@ -257,7 +258,8 @@ function genXML() {
 
         $.post("hello",{"type":"saveXml","path":pathGlobal,"xml_content":xml_content},
         function (data) {
-            if(data == "success")
+            console.log(data);
+            if("success" === data)
                 alert("Success!");
             else
                 alert("Fail!");
@@ -274,28 +276,21 @@ function addLabel() {
     console.log(newX+" "+oldY);
     var ctx_sub = canvas.getContext('2d');
     ctx_sub.font="24px serif";
-    ctx_sub.strokeRect(oldX[label_num-1],oldY[label_num-1],10,20);
+    //ctx_sub.strokeRect(oldX[label_num-1],oldY[label_num-1],10,20);
     ctx_sub.fillText(label_g[label_num-1],newX[label_num-1]+5*label_num,oldY[label_num-1],50);
 }
 
-function setLabel() {
-    var canvas = document.getElementById("canvas_"+label_num);
-    console.log(label_num);
-    console.log(label_g);
-    console.log(newX[label_num-1]+" "+oldY[label_num-1]);
-    var ctx_sub = canvas.getContext('2d');
-    ctx_sub.font="24px serif";
-    ctx_sub.strokeRect(oldX,oldY,10,20);
-    ctx_sub.fillText(label_g,newX[label_num-1]+5*label_num,oldY[label_num-1],50);
-}
+// function setLabel() {
+//     var canvas = document.getElementById("canvas_"+label_num);
+//     console.log(label_num);
+//     console.log(label_g);
+//     console.log(newX[label_num-1]+" "+oldY[label_num-1]);
+//     var ctx_sub = canvas.getContext('2d');
+//     ctx_sub.font="24px serif";
+//     //ctx_sub.strokeRect(oldX,oldY,10,20);
+//     ctx_sub.fillText(label_g,newX[label_num-1]+5*label_num,oldY[label_num-1],50);
+//}
 
-function addLabelWithName(name) {
-    var canvas = document.getElementById("canvas_"+label_num);
-    var ctx_sub = canvas.getContext('2d');
-    ctx_sub.font="24px serif";
-   // ctx_sub.strokeRect(oldX,oldY,10,20);
-    ctx_sub.strokeText(name,newX[label_num-1]+5*label_num,oldY[label_num-1]);
-}
 
 function getTest()
 {
