@@ -30,8 +30,10 @@ public class Servlet extends javax.servlet.http.HttpServlet {
     private boolean handleGet(String type, HttpServletRequest request, HttpServletResponse response) throws IOException {
         boolean result = false;
         String ip_path = request.getParameter("path");
-        String ip = "hdfs://" + ip_path.split(":")[0] + ":9000";
-        String path = ip_path.split(":")[1];
+        String host = ip_path.split(":")[0] ;
+        String port = ip_path.split(":")[1];
+        String path = ip_path.split(":")[2];
+        String ip = "hdfs://"+host+":"+port;
         HdfsOpreate hdfsOpreate = new HdfsOpreate(ip);
         switch (type) {
             case "readImage":

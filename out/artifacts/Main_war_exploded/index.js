@@ -261,9 +261,9 @@ function setXMLtoJava() {
 
 function readFilelist() {
     console.log("read many files!");
-    path = prompt("请输入路径","192.168.1.203:/Output/image/");
+    path = prompt("请输入路径","192.168.1.203:9000:/Output/image/");
     if(path == null)
-        alert("请输入路径！(ip:path)");
+        alert("请输入路径！(host:port:path)");
     else {
         $.post("hello",{"type":"readDir","path":path},function (data) {
             console.log(data);
@@ -273,9 +273,9 @@ function readFilelist() {
 
 function readImage() {
     console.log("read image");
-    path = prompt("请输入图片路径以及文件名","192.168.1.203:/Output/image/index.jpg");
+    path = prompt("请输入图片路径以及文件名","192.168.1.203:9000:/Output/image/index.jpg");
     if(path == null)
-        alert("请输入地址！(ip:path)");
+        alert("请输入地址！(host:port:path)");
     else{
         pathGlobal = path;
         console.log(path);
