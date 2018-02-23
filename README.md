@@ -51,3 +51,5 @@
 >imglabel/Main/src/Servlet.java: 后端代码，处理前端请求
 >
 
+##运行指令
+sudo docker run --network=host --rm -d -e JAVA_HOME="/opt/jdk1.8.0_161" xwzheng/imagelabel:carlprilo /opt/tomcat/apache-tomcat-9.0.4/bin/catalina.sh run
