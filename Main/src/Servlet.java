@@ -9,8 +9,6 @@ import java.io.*;
 @WebServlet(name = "Servlet",urlPatterns = {"/hello"})
 public class Servlet extends javax.servlet.http.HttpServlet {
 
-   // static String ip = "hdfs://192.168.1.203:9000";
-   // static String path = "/Output";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

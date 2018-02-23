@@ -13,12 +13,10 @@ public class HdfsOpreate {
     //initialization
     static FileSystem hdfs;
     static Configuration conf;
-   // static String path;
 
     public HdfsOpreate(String ip) {
         conf = new Configuration();
-        //static FileSystem hdfs;
-       // path = "192.168.1.203";
+
         conf.set("fs.defaultFS", ip);
         try {
             hdfs = FileSystem.get(conf);
@@ -34,18 +32,7 @@ public class HdfsOpreate {
         System.out.println("new dir \t" + conf.get("fs.default.name") + dir);
     }
 
-    //copy from local file to HDFS file
-//    public void copyFile(String localSrc, String hdfsDst) throws IOException {
-//        Path src = new Path(localSrc);
-//        Path dst = new Path(hdfsDst);
-//        hdfs.copyFromLocalFile(src, dst);
-//        //list all the files in the current direction
-//        FileStatus files[] = hdfs.listStatus(dst);
-//        System.out.println("Upload to \t" + conf.get("fs.default.name") + hdfsDst);
-//        for (FileStatus file : files) {
-//            System.out.println(file.getPath());
-//        }
-//    }
+
 
     //create a new file
     public void createFile(String fileName, String fileContent,HttpServletResponse response) throws IOException {
@@ -75,17 +62,7 @@ public class HdfsOpreate {
         outputStream.close();
     }
 
-    //judge a file existed? and delete it!
-//    public void deleteFile(String fileName) throws IOException {
-//        Path f = new Path(fileName);
-//        boolean isExists = hdfs.exists(f);
-//        if (isExists) { //if exists, delete
-//            boolean isDel = hdfs.delete(f, true);
-//            System.out.println(fileName + "  delete? \t" + isDel);
-//        } else {
-//            System.out.println(fileName + "  exist? \t" + isExists);
-//        }
-//    }
+
 
     //read a file
     public void readFile(String fileName, HttpServletResponse response) throws IOException {

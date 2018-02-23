@@ -7,165 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28570937-e953-45dc-b7ba-bdfbaa79e87c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Main_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Main_war.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/imglabel_war.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/imglabel_war_exploded.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Main/Main.iml" afterPath="$PROJECT_DIR$/Main/Main.iml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/classes/Servlet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/classes/src/HdfsOpreate.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/accessors-smart-1.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/asm-5.0.4.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/avro-1.7.7.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-beanutils-1.9.3.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-cli-1.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-codec-1.4.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-collections-3.2.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-compress-1.4.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-configuration2-2.1.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-daemon-1.0.13.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-lang-2.6.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-lang3-3.4.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-logging-1.1.3.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-math3-3.1.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/commons-net-3.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/curator-client-2.12.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/curator-framework-2.12.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/curator-recipes-2.12.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/dom4j-1.6.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/gson-2.2.4.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/guava-11.0.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-annotations-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-auth-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-client-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-common-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-hdfs-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-hdfs-client-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-mapreduce-client-common-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-mapreduce-client-core-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-mapreduce-client-jobclient-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-yarn-api-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-yarn-client-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/hadoop-yarn-common-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/htrace-core4-4.1.0-incubating.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/httpclient-4.5.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/httpcore-4.4.4.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jackson-annotations-2.7.8.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jackson-core-2.7.8.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jackson-core-asl-1.9.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jackson-databind-2.7.8.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jackson-jaxrs-1.9.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jackson-jaxrs-base-2.7.8.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jackson-jaxrs-json-provider-2.7.8.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jackson-mapper-asl-1.9.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jackson-module-jaxb-annotations-2.7.8.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jackson-xc-1.9.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jaxb-api-2.2.11.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jaxb-impl-2.2.3-1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jcip-annotations-1.0-1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jcommander.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jersey-client-1.19.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jersey-core-1.19.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jersey-json-1.19.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jersey-server-1.19.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jersey-servlet-1.19.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jettison-1.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jetty-http-9.3.19.v20170502.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jetty-io-9.3.19.v20170502.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jetty-security-9.3.19.v20170502.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jetty-server-9.3.19.v20170502.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jetty-servlet-9.3.19.v20170502.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jetty-util-9.3.19.v20170502.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jetty-util-ajax-9.3.19.v20170502.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jetty-webapp-9.3.19.v20170502.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jetty-xml-9.3.19.v20170502.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jline-0.9.94.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jsch-0.1.54.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/json-smart-2.3.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jsp-api-2.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jsr305-3.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/jsr311-api-1.1.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerb-admin-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerb-client-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerb-common-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerb-core-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerb-crypto-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerb-identity-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerb-server-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerb-simplekdc-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerb-util-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerby-asn1-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerby-config-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerby-pkix-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerby-util-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/kerby-xdr-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/leveldbjni-all-1.8.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/log4j-1.2.17.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/netty-3.10.5.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/netty-all-4.0.23.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/nimbus-jose-jwt-4.41.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/okhttp-2.4.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/okio-1.4.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/paranamer-2.3.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/protobuf-java-2.5.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/re2j-1.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/slf4j-api-1.7.25.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/slf4j-log4j12-1.7.25.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/snappy-java-1.0.5.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/stax2-api-3.1.4.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/testng.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/token-provider-1.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/woodstox-core-5.0.3.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/xml-apis-1.0.b2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/xz-1.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/lib/zookeeper-3.4.9.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/WEB-INF/web.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/cancel.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/color.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/color_line.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/copy.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/delete.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/done.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/done.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/edit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/expert1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/expert2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/eye.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/feBlend-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/file.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/fit-width.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/fit-window.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/fit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/help.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/labels.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/labels.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/new.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/next.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/objects.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/open.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/open.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/prev.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/quit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/resetall.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/save-as.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/save-as.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/save.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/save.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/undo-cross.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/undo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/verify.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/zoom-in.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/zoom-out.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/icons/zoom.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/index.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/jquery-3.3.1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Main_war_exploded/main.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/src/Servlet.java" afterPath="$PROJECT_DIR$/Main/src/Servlet.java" />
+      <change beforePath="$PROJECT_DIR$/Main/src/src/HdfsOpreate.java" afterPath="$PROJECT_DIR$/Main/src/src/HdfsOpreate.java" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/close.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/color.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/color_line.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/done.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/edit.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/expert1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/expert2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/feBlend-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/fit-width.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/fit-window.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/fit.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/help.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/labels.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/labels.svg" afterPath="$PROJECT_DIR$/Main/web/icons/labels.svg" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/new.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/resetall.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/undo-cross.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/undo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/zoom-in.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/zoom-out.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Main/web/icons/zoom.png" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -182,21 +47,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Servlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/src/Servlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HdfsOpreate.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HdfsOpreate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/src/src/HdfsOpreate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-818">
-              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="105">
+              <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -214,13 +69,71 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/web/main.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1365">
               <caret line="91" column="43" lean-forward="false" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/web/index.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-3.3.1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/web/jquery-3.3.1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85272">
+              <caret line="3670" column="0" lean-forward="false" selection-start-line="3670" selection-start-column="0" selection-end-line="3670" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verify.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/web/icons/verify.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="labels.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/web/icons/labels.svg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prev.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/web/icons/prev.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/web/icons/file.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -253,10 +166,11 @@
         <option value="$PROJECT_DIR$/Main/Main.iml" />
         <option value="$PROJECT_DIR$/Main/web/index.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/Main/src/src/HdfsOpreate.java" />
         <option value="$PROJECT_DIR$/Main/web/index.js" />
-        <option value="$PROJECT_DIR$/Main/src/Servlet.java" />
         <option value="$PROJECT_DIR$/Main/web/main.html" />
+        <option value="$PROJECT_DIR$/Main/src/Servlet.java" />
+        <option value="$PROJECT_DIR$/Main/web/icons/labels.svg" />
+        <option value="$PROJECT_DIR$/Main/src/src/HdfsOpreate.java" />
       </list>
     </option>
   </component>
@@ -395,6 +309,13 @@
               <item name="imglabel" type="462c0819:PsiDirectoryNode" />
               <item name="Main" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="imglabel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="imglabel" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="imglabel" type="b2602c69:ProjectViewProjectNode" />
@@ -711,12 +632,12 @@
       <workItem from="1517992891926" duration="4760000" />
       <workItem from="1518054133976" duration="20930000" />
       <workItem from="1519264674639" duration="18041000" />
-      <workItem from="1519365599839" duration="400000" />
+      <workItem from="1519365599839" duration="1558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64941000" />
+    <option name="totallyTimeSpent" value="66099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -733,8 +654,8 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23343527" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.151" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27797619" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -801,244 +722,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-common/3.0.0/hadoop-common-3.0.0.jar!/org/apache/hadoop/conf/Configuration.class" />
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3/conf/settings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="157" column="8" lean-forward="false" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/Main.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/web/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1519365559576" expanded="true" signature="10707:10709" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/src/Servlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/web/index.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/web/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/src/src/HdfsOpreate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3/conf/settings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="157" column="8" lean-forward="false" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/web/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1519365559576" expanded="true" signature="10707:10709" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/src/src/HdfsOpreate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/web/index.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/web/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/src/Servlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3/conf/settings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="157" column="8" lean-forward="false" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-common/3.0.0/hadoop-common-3.0.0.jar!/META-INF/maven/org.apache.hadoop/hadoop-common/pom.xml" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-common/3.0.0/hadoop-common-3.0.0.jar!/META-INF/maven/org.apache.hadoop/hadoop-common/pom.properties" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-common/3.0.0/hadoop-common-3.0.0.jar!/org/apache/hadoop/conf/Configuration.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/apache-tomcat-9.0.4/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class" />
-    <entry file="file://$PROJECT_DIR$/Main/WEB-INF/classes/Servlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/Main.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../lib/jdk1.8.0_161/src.zip!/org/w3c/dom/Document.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/DocumentHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/DocumentFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/DocumentException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/WEB-INF/lib/asm/asm-parent/3.3.1/_remote.repositories" />
-    <entry file="file://$PROJECT_DIR$/Main/WEB-INF/lib/asm/asm-parent/3.3.1/asm-parent-3.3.1.pom" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-common/3.0.0/hadoop-common-3.0.0.jar!/org/apache/hadoop/fs/http/HttpFileSystem.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-common/3.0.0/hadoop-common-3.0.0.jar!/org/apache/hadoop/fs/http/HttpsFileSystem.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-common/3.0.0/hadoop-common-3.0.0.jar!/org/apache/hadoop/fs/FileUtil.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1060,14 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/web/jquery-3.3.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
@@ -1080,14 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/web/index.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1105,6 +772,209 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Main/src/Servlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/color_line.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/done.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/close.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/edit.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/fit-width.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/fit-window.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/help.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/labels.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/open.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/resetall.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/undo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/zoom.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/zoom-in.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/zoom-out.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/quit.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/open.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/objects.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/next.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/new.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/fit.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/feBlend-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/expert2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/expert1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/eye.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/done.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/delete.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/copy.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/color.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/cancel.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/save.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/save.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/save-as.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/undo-cross.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/file.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/labels.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/prev.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/icons/verify.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/src/src/HdfsOpreate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main/web/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3330">
@@ -1115,26 +985,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/index.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/web/jquery-3.3.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85272">
+          <caret line="3670" column="0" lean-forward="false" selection-start-line="3670" selection-start-column="0" selection-end-line="3670" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main/web/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1365">
           <caret line="91" column="43" lean-forward="false" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/src/Servlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/src/src/HdfsOpreate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-818">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding />
         </state>
       </provider>
