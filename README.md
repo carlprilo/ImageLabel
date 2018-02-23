@@ -1,5 +1,5 @@
-#ImageLabel Web版文档
-##标注操作流程
+# ImageLabel Web版文档
+## 标注操作流程
 >1、先点击read image图标填写完整地址名和文件名，地址名格式 ip:path/file。ip为hdfs的ip，path是文件在hdfs中的路径，file是路径名。参考输入框中给出的样例填写即可。 
 >
 >2、图片加载好后，点击create rectBox上方图标，图标变化之后，便可以在图片上绘制box。按下鼠标左键，沿对角线拖动，松开鼠标左键后，box便绘制完成。
@@ -16,14 +16,14 @@
 >
 >
 
-##开发环境
+## 开发环境
 >ubuntu 16.04LTS + IDEA ULTIMATE 2017.3
 
-##运行环境
+## 运行环境
 >jdk1.8.0_161 + tomcat 9.0.4
 
 
-##打包部署
+## 打包部署
 >1、用IDEA打开项目文件夹，java文件可能会提示缺少包，直接alt+enter快速修复，然后选择将maven导入的包加入classpath即可解决。
 >
 >2、File->Project Strcuture->Artifats. 点击Main:war，右侧type 选择Web Application：Archive即可。点击Apply。
@@ -37,7 +37,7 @@
 >catalina.sh run 即可启动服务。（需要实现配置JAVA_HOME）.
 
 
-##代码组织
+## 代码组织
 >imglabel/Main/web/main.html: 页面布局
 >
 >imglabel/Main/web/index.js: 前端代码
@@ -51,6 +51,6 @@
 >imglabel/Main/src/Servlet.java: 后端代码，处理前端请求
 >
 
-##运行指令
+## 运行指令
 
 sudo docker run --network=host  --rm -d -e JAVA_HOME="/opt/jdk1.8.0_161" xwzheng/imagelabel:carlprilo /opt/tomcat/apache-tomcat-9.0.4/bin/catalina.sh run

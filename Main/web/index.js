@@ -1,10 +1,10 @@
-var editMode = false;
-var oldX = new Array();
+var editMode = false; //check whether deleted or not
+var oldX = new Array();  //four dots of box
 var oldY = new Array();
 var newX = new Array();
 var newY = new Array();
 var enable = new Array();
-var pure_name_g;
+var pure_name_g;        //name of image without suffix
 var changed = false;
 var w_g; //image width
 var h_g;  //image height
@@ -15,7 +15,7 @@ var pathGlobal = null;
 
 function checkMouse(ev) {
     if (!editMode)
-        return
+        return;
 
     oldX.push(ev.offsetX);
     oldY.push(ev.offsetY);
@@ -23,7 +23,7 @@ function checkMouse(ev) {
 
 function draw(ev) {
     if(!editMode)
-        return
+        return;
 
     newX.push(ev.offsetX);
     newY.push(ev.offsetY);
@@ -222,43 +222,6 @@ function addLabel() {
 
 
 
-function getTest()
-{
-    console.log("touch head");
-    var xmlhttp;
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-    }
-    else
-    {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.open("GET","/hello",true);
-    xmlhttp.send("xml=apple");
-    console.log("touch here\n");
-}
-
-function setXMLtoJava() {
-    console.log("set xml to java");
-    // var xmlhttp;
-    // if (window.XMLHttpRequest)
-    // {// code for IE7+, Firefox, Chrome, Opera, Safari
-    //     xmlhttp=new XMLHttpRequest();
-    // }
-    // else
-    // {// code for IE6, IE5
-    //     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    // }
-    // xmlhttp.open("GET","/hello",true);
-    // xmlhttp.setRequestHeader("Content-type","post_request")
-    // var content = "xml="+xml_content;
-    // xmlhttp.send(content);
-
-    $.post("hello",{"type":"saveXML","xml":xml_content});
-}
-
-
 function readFilelist() {
     console.log("read many files!");
     path = prompt("请输入路径","192.168.1.203:9000:/Output/image/");
@@ -282,8 +245,8 @@ function readImage() {
         $.get("hello",{"type":"readImage","path":path},
             function (data) {
                 console.log(data);
-                clearCanvas();
-                initVar();
+                clearCanvas();      //initialize canvas before loading new image
+                initVar();          //initialize variables before loading new images
 
                 var c = document.getElementById("main_canvas");
                 var ctx = c.getContext("2d");
@@ -307,7 +270,7 @@ function readImage() {
     }
 }
 
-function initVar() {
+function initVar() {   //initialize the variables
     editMode = false;
     oldX = new Array();
     oldY = new Array();
@@ -335,7 +298,7 @@ function deleteLabel() {
         alert("请输入要删除的label编号");
         return;
     }
-    enable[delete_label-1] = false;  //label_num从１开始有效，其余数组是０开始有效，所以要－１
+    enable[delete_label-1] = false;  //label_num begin with 1 but others begin with 0
     var c = document.getElementById("canvas_"+delete_label);
     var ctx = c.getContext("2d");
     ctx.clearRect(0,0,c.width,c.height);
