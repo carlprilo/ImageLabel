@@ -1,5 +1,13 @@
 # ImageLabel Web版文档
+## 运行指令
+
+>sudo docker run -p port:8080  --rm -d -e JAVA_HOME="/opt/jdk1.8.0_161" xwzheng/imagelabel:carlprilo /opt/tomcat/apache-tomcat-9.0.4/bin/catalina.sh run
+>
+>其中，port=某个未被占用的端口，如8080
+
 ## 标注操作流程
+>0、用Chrome浏览器打开网址http://hostip:port/Main_war/main.html。 
+>
 >1、先点击read image图标填写完整地址名和文件名，地址名格式 ip:path/file。ip为hdfs的ip，path是文件在hdfs中的路径，file是路径名。参考输入框中给出的样例填写即可。 
 >
 >2、图片加载好后，点击create rectBox上方图标，图标变化之后，便可以在图片上绘制box。按下鼠标左键，沿对角线拖动，松开鼠标左键后，box便绘制完成。
@@ -51,6 +59,4 @@
 >imglabel/Main/src/Servlet.java: 后端代码，处理前端请求
 >
 
-## 运行指令
 
-sudo docker run --network=host  --rm -d -e JAVA_HOME="/opt/jdk1.8.0_161" xwzheng/imagelabel:carlprilo /opt/tomcat/apache-tomcat-9.0.4/bin/catalina.sh run
